@@ -1,0 +1,692 @@
+/* CSS THEME DESIGNED BY XLYF ADMIN */
+
+/*
+HTML
+  BODY
+    CONTAINER
+      HEADER
+        HEADER - NAV BAR
+      MAIN
+        MAPS
+        FORM CONTROL
+        FIGURES
+        TABLES
+        FORMATTING
+        FORMATTING - COLOURS
+      FOOTER
+    FUNCTIONS/SCRIPTS
+*/
+
+/* ########################################### HTML, BODY #########################################
+   ################################################################################################ */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height : 100%;
+  margin : 0;
+  padding : 0;
+  position : relative;
+}
+
+/* ########################################### CONTAINER ##########################################
+   ################################################################################################ */
+   
+.container {
+  font-family : "Segoe UI";
+}
+.container .center {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width:320px) {
+  .container .center {
+    width : 95%;
+  }
+  .container .left, .container .right {
+    display: none;
+  }
+  .container .left div, .container .right div {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  .container {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 190px;
+  }
+  .container .center {
+    width : 60%;
+    padding-top: 50px;
+  }
+  .container .left {
+    float: left;
+    display: inline-block;
+    width : 20%;
+    margin-top: 180px;
+    position: fixed;
+    left: 0;
+  }
+  .container .left div, .container .right div, .container .left img, .container .right img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .container .right { 
+    float: right;
+    display: inline-block;
+    width : 20%;
+    margin-top: 180px;
+    position: fixed;
+    right: 0;
+  }
+  .clear {
+    clear: both; 
+  }
+}
+
+/* ############################################# HEADER ###########################################
+   ################################################################################################ */
+
+header {
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+}
+#logo {
+  display: inline-block;
+  vertical-align: center;
+}
+#logo-title {
+  display: inline-block;
+  vertical-align: center;
+}
+.logo-title {
+  transform : skew(-10deg);
+  font-size : 44px;
+  font-weight: 900;
+  margin: 0;
+  height: 0;
+  line-height: 0;
+}
+.logo-title a {
+  color : #FF8C00;
+}
+.logo-slogan {
+  font-size : 16px;
+  color : #9a9a9a;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@media only screen and (min-width:320px) {
+  header {
+    height: 100px;
+  }
+  #logo {
+    padding-left: 8px;
+    padding-top: 5px;
+  }
+  .logo-slogan {
+    padding-left: 8px;
+  }
+}
+
+@media only screen and (min-width:480px) {
+  header {
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  header {
+    position: sticky;
+    overflow: visible;
+    height: 65px;
+    top: 0;
+    z-index: 99; /* Setting this value prevents Map/image from scolling over the sticky header */
+  }
+  #logo {
+    padding-left: 20px;
+    padding-top: 4px;
+  }
+  .logo-slogan {
+    padding-left: 20px;
+  }
+}
+
+
+/* ######################################## HEADER - NAV BAR ######################################
+   ################################################################################################ */
+
+li.menu {
+  float : right;
+}
+li.menu a {
+  display : block;
+  font-size : 0.875rem;
+  text-align : center;
+  letter-spacing : 2px;
+  color : #fff;
+  font-weight: 500;
+}
+li.menu a:hover {
+  border: 1px dotted transparent;
+  outline: 0; /* To remove the dotted line around the box which stays even after returning to the previous page */
+}
+li.menu a:focus {             /* This piece of code is required in order to remove the pressed button action even after returning to the previous page */
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+#startup #header-common .active-startup, #travel #header-common .active-travel {
+  font-weight: bold;
+  color : #000;
+}
+
+@media only screen and (min-width:320px) {
+  ul.menu {
+    list-style-type : none;
+    margin: 0;
+    padding: 0;
+    overflow : hidden;
+  }
+  li.menu a {
+    padding : 15px 8px 2px;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  ul.menu {
+    list-style-type : none;
+    margin: 0;
+    padding: 0;
+  }
+  li.menu a {
+    padding : 0px 25px 0px;
+  }
+}
+
+/* ############################################# MAIN #############################################
+   ################################################################################################ */
+
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+article {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+article h3 {
+  padding-top: 20px;
+}
+
+.featured {
+  display : inline-block;
+  background : #161616;
+  color : #fff;
+  font-weight : 900;
+  letter-spacing : 0.5px;
+  font-size : 14px;
+  padding : 7px 15px;
+}
+.featured-continent {
+  display : inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background : #660033;
+  color : #fff;
+  font-weight : 900;
+  letter-spacing : 0.5px;
+  font-size : 14px;
+  padding : 7px 15px;
+}
+.read-more {
+  float : left;
+  border : #888 solid 2px;
+  font-size : 0.825rem;
+  font-weight : 700;
+  padding : 10px 20px;
+  letter-spacing : 1px;
+  color : #000;
+}
+.read-more:hover {
+  background-color : #ab7945;
+  border-color : #ab7944;
+  color : white;
+}
+
+/* ############################################### MAPS ###########################################
+   ################################################################################################ */
+
+#chartdiv {
+  background-color : #adc2eb;
+  color : #fff;
+}
+
+@media only screen and (min-width:320px) {
+  #chartdiv {
+    height : 300px;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  #chartdiv {
+    height : 720px;
+  }
+}
+
+/* ########################################### FORM CONTROL #######################################
+   ################################################################################################ */
+
+.form-control {
+  height : 40px;
+}
+
+@media only screen and (min-width:320px) {
+  .form-control {
+    width : 80%;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  .form-control {
+    width : 30%;
+  }
+}
+
+/* ############################################ FIGURES ###########################################
+   ################################################################################################ */
+
+figure figcaption {
+  text-align : center;
+}
+#logos-footer {
+  text-align : center;
+}
+.responsive-fig {
+  display : block;
+  margin-left : auto;
+  margin-right : auto;
+}
+.responsive-logo {
+  display : inline-block;
+  vertical-align : middle;
+  margin-left : auto;
+  margin-right : auto;
+}
+
+@media only screen and (min-width:320px) {
+  .responsive-fig {
+    width : 100%;
+    height : auto;
+  }
+}
+
+@media only screen and (min-width:600px) {
+  .responsive-fig {
+    width : 80%;
+    height : auto;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+  .responsive-logo {
+    width : 30%;
+    height : auto;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  .responsive-fig {
+    width : 70%;
+    height : auto;
+  }
+}
+
+/* ############################################# TABLES ###########################################
+   ################################################################################################ */
+
+table, th, td {
+  padding : 3px;
+  border : #cccccc solid 1px;
+  border-collapse:collapse;
+}
+
+.sortable th{
+	background-color: #E4EDFC;
+	border-bottom: 3px solid #336699;
+	border-right: 1px solid #336699;
+	cursor:pointer;
+	padding: 6px 15px 6px 6px;
+	text-align:center;
+	white-space: nowrap;
+	}
+
+.sortable td {
+  width:50%;
+  }
+
+@media only screen and (min-width:600px) {
+  .table30 {
+    width : 60%;
+    margin-left: 20%; 
+    margin-right: 20%;
+  }
+  .table40, .sortable, .table50, .table80 {
+    width : 80%;
+    margin-left: 10%; 
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  .table30 {
+    width : 30%;
+    margin-left: 35%; 
+    margin-right: 35%;
+  }
+  .table40 {
+    width : 40%;
+    margin-left: 30%; 
+    margin-right: 30%;
+  }
+  .sortable {
+    width : 49%;
+    margin-left: 25.5%; 
+    margin-right: 25.5%;
+  }
+  .table50 {
+    width : 50%;
+    margin-left: 25%; 
+    margin-right: 25%;
+  }
+  .table80 {
+    width : 80%;
+    margin-left: 10%; 
+    margin-right: 10%;
+  }
+}
+
+
+/* ########################################### FORMATTING #########################################
+   ################################################################################################ */
+
+a {
+  text-decoration : none;
+}
+.active {
+  font-weight: bold;
+}
+.aligncent {
+  text-align : center;
+}
+.aligncent-bold {
+  text-align : center;
+  font-weight : bold;
+}
+.aligncentftsize12 {
+  text-align : center;
+  font-size : 12px;
+}
+.alignjust {
+  text-align : justify;
+}
+.alignleft {
+  text-align : left;
+}
+.border-image {
+  border : #000000 solid 1px;
+}
+.ftsize10 li {
+  font-size : 10pt;
+}
+.ftsize12 {
+  font-size : 12px;
+}
+.paddtop20 {
+  padding-top : 20px;
+}
+#paddbot20 {
+  padding-bottom : 20px;
+}
+.paddbot40 {
+  padding-bottom : 40px;
+}
+
+/* ##################################### FORMATTING - COLOURS #####################################
+   ################################################################################################ */
+
+.bg-blue-bold {
+  font-weight : bold;
+  background-color : #99ccff;
+}
+.bg-blue-left {
+  text-align : left;
+  background-color : #99ccff;
+}
+.bg-green-dark-bold {
+  font-weight : bold;
+  background-color : #33cc33;
+}
+.bg-green-dark-center {
+  text-align : center;
+  background-color : #33cc33;
+}
+.bg-green-bright-bold {
+  font-weight : bold;
+  background-color : #66ff33;
+}
+.bg-green-bright-center {
+  text-align : center;
+  background-color : #66ff33;
+}
+.bg-green-lime-bold {
+  font-weight : bold;
+  background-color : #99ff33;
+}
+.bg-green-lime-center {
+  text-align : center;
+  background-color : #99ff33;
+}
+.bg-green-light-bold {
+  font-weight : bold;
+  background-color : #99ff99;
+}
+.bg-green-light-left {
+  text-align : left;
+  background-color : #99ff99;
+}
+.bg-green-superlight-bold {
+  font-weight : bold;
+  background-color : #ccffcc;
+}
+.bg-green-superlight-center {
+  text-align : center;
+  background-color : #ccffcc;
+}
+.bg-grey {
+  background-color : #d0e1e1;
+}
+.bg-grey-center {
+  text-align : center;
+  background-color : #d0e1e1;
+}
+.bg-grey-left {
+  text-align : left;
+  background-color : #d0e1e1;
+}
+.bg-red-bold {
+  font-weight : bold;
+  background-color : #ffcccc;
+}
+.bg-red-left {
+  text-align : left;
+  background-color : #ffcccc;
+}
+.bg-turquoise-dark-bold {
+  font-weight : bold;
+  background-color : #00ffcc;
+}
+.bg-turquoise-dark-center {
+  text-align : center;
+  background-color : #00ffcc;
+}
+.bg-turquoise-light-bold {
+  font-weight : bold;
+  background-color : #99ffcc;
+}
+.bg-turquoise-light-center {
+  text-align : center;
+  background-color : #99ffcc;
+}
+.bg-yellow-bold {
+  font-weight : bold;
+  background-color : #ffffb3;
+}
+.bg-yellow-left {
+  text-align : left;
+  background-color : #ffffb3;
+}
+.white-bold {
+  font-weight : bold;
+  color : white;
+}
+
+/* ########################################### FOOTER #############################################
+   ################################################################################################ */
+
+#footer {   
+  background-color: #efefef;
+}
+#footer1 {   
+  background-color: #efefef;
+  height: 40px;
+}
+#footer2 {   
+  color: white;
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  height: 60px;
+}
+  
+@media only screen and (min-width:320px) {
+  #footer {
+    overflow : hidden;
+  }
+}
+
+@media only screen and (min-width:1224px) {
+  #footer {    /* Set for absolute footer, footer id="footer" */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+ul.menu-footer {
+  list-style-type : none;
+  overflow : hidden;
+  padding-right: 1em;
+  text-indent: -1em;
+  text-align: center;
+  line-height: 0;
+}
+li.menu-footer a {
+  display : inline-block;
+  font-size : 0.75rem;
+  text-align: center;
+  padding: 15px 0px 15px 16px;
+  letter-spacing : 2px;
+  color : #fff;
+  font-weight: 500;
+}
+li.menu-footer a:hover {
+  border: 1px dotted transparent;
+  outline: 0; /* To remove the dotted line around the box which stays even after returning to the previous page */
+}
+li.menu-footer a:focus {  /* This piece of code is required in order to remove the pressed button action even after returning to the previous page */
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.footer-text {
+  text-align : center;
+  font-size : 12px;
+  letter-spacing : 0.5px;
+  line-height: 0;
+}
+#home #footer .active-home, #about #footer .active-about, #contact #footer .active-contact, #privacy #footer .active-privacy {
+  font-weight: bold;
+  color : #000;
+}
+
+
+/* #################################### FUNCTIONS/SCRIPTS #########################################
+   ################################################################################################ */
+
+/* Icon Up and Down */
+.sortable th.descend:after{
+	content: "\25B2";
+	}
+.sortable th.ascend:after{
+	content: "\25BC";
+	}
+
+/* Scroll to Top */
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: left;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+
+
+/* Copyrights 2019 XLYF | https://www.xlyf.org */
